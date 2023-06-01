@@ -24,7 +24,6 @@
     border-radius: var(--size);
     outline: 4px solid var(--light);
     color: var(--light);
-    line-height: inherit;
   }
   button:focus {
     outline: 4px solid var(--accent);
@@ -49,5 +48,16 @@
   .back {
     rotate: var(--rotate);
     backface-visibility: hidden;
+  }
+
+  @media (prefers-color-scheme: light) {
+    button:focus {
+      outline-color: var(--dark);
+    }
+    .front,
+    .back {
+      background-color: var(--light);
+      color: var(--dark);
+    }
   }
 </style>

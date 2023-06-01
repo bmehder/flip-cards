@@ -21,4 +21,7 @@
     padding-block: var(--size);
     padding-inline: var(--double-size);
   }
+  select:focus {
+    outline: 2px solid var(--accent);
+  }
 </style>

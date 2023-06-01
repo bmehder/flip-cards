@@ -3,24 +3,27 @@
   import Spinner from './Spinner.svelte'
   import Header from './Header.svelte'
   import Card from './Card.svelte'
+  import Error from './Error.svelte'
 
-	export let endpoints = []
+  export let endpoints = []
 
   let items
   let value = endpoints[0]?.url
   let isLoading = true
+  let error
 
   const flyInOptions = { x: 2000, delay: 500, duration: 300, opacity: 1 }
-  const flyOutOptions = { x: -2000, delay: 0, duration: 300, opacity: 1 }
+  const flyOutOptions = { y: 1000, delay: 0, duration: 300, opacity: 1 }
 
-  const parseResponseToJS = arg => arg.ok && arg.json()
+  const parseToJS = response => response.ok && response.json()
   const setItems = arg => (items = arg)
+  const setError = arg => (error = arg)
   const setIsLoading = () => (isLoading = false)
 
   $: fetch(value)
-    .then(parseResponseToJS)
+    .then(parseToJS)
     .then(setItems)
-    .catch(console.error)
+    .catch(setError)
     .finally(setIsLoading)
 </script>
 
@@ -30,6 +33,8 @@
   <main>
     {#if isLoading}
       <Spinner />
+    {:else if error}
+      <Error {error} />
     {:else}
       {#key value}
         <section in:fly={flyInOptions} out:fly={flyOutOptions}>
@@ -46,7 +51,6 @@
 
 <style>
   main {
-    min-height: 100vh;
     text-align: center;
     padding-block: var(--size);
     padding-inline: var(--double-size);
