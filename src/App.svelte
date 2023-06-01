@@ -10,8 +10,8 @@
 	let value = endpoints[0].url
 	let isLoading = true
 	
-	const flyInOptions = { x: 1200, delay: 300, duration: 300, opacity: 1 }
-	const flyOutOptions = { x: -1200, duration: 300, opacity: 1 }
+	const flyInOptions = { x: 1200, delay: 200, duration: 200, opacity: 1 }
+	const flyOutOptions = { x: -1200, duration: 200, opacity: 1 }
 
 	const parseResponseToJS = arg => arg.json()
 	const setItems = data => items = data
