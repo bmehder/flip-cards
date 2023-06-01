@@ -6,8 +6,8 @@
 <header>
   <h1>FlipCards</h1>
   <select bind:value>
-    {#each endpoints as endpoint}
-      <option value={endpoint.url}>{endpoint.name}</option>
+    {#each endpoints as { url, name }}
+      <option value={url}>{name}</option>
     {/each}
   </select>
 </header>
@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: var(--size);
-    padding-inline: var(--size);
+    padding-block: var(--size);
+    padding-inline: var(--double-size);
   }
 </style>

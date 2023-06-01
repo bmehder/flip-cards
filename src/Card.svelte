@@ -8,10 +8,10 @@
 
 <button class:isFlipped on:click={handleClick}>
   <div class="front">
-    <div class="front-content">{item.title}</div>
+    <div>{item.title}</div>
   </div>
   <div class="back">
-    <div class="back-content">{@html item.excerpt}</div>
+    <div>{@html item.excerpt}</div>
   </div>
 </button>
 
