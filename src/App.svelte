@@ -62,6 +62,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--min), var(--max)));
     gap: var(--double-size);
-    perspective: 10000px;
+    perspective: 2000px;
   }
 </style>
