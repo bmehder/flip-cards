@@ -34,8 +34,8 @@ export default {
 	output: {
 		sourcemap: true,
 		format: 'iife',
-		name: 'app',
-		file: 'public/build/bundle.js'
+		name: 'flipCards',
+		file: 'public/build/flip-cards.js'
 	},
 	plugins: [
 		svelte({
@@ -46,7 +46,7 @@ export default {
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
-		css({ output: 'bundle.css' }),
+		css({ output: 'flip-cards.css' }),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In

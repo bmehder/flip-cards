@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-	<title>MFS Flip Cards</title>
+    <title>MFS Flip Cards</title>
 
-	<link rel='icon' type='image/png' href='/favicon.png'>
-	<link rel='stylesheet' href='/global.css'>
-	<link rel='stylesheet' href='/build/bundle.css'>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/build/flip-cards.css" />
 
-	<script defer src='/build/bundle.js'></script>
-</head>
+    <script src="/build/flip-cards.js"></script>
+  </head>
 
-<body>
-</body>
+  <body>
+    <script>
+      flipCards(document.body, {
+        endpoints: [
+          {
+            name: 'Art Class',
+            url: 'https://public-api.wordpress.com/rest/v1.1/sites/repo995752852.wordpress.com/posts/?category=art-class',
+          },
+          {
+            name: 'STEAM Club',
+            url: 'https://public-api.wordpress.com/rest/v1.1/sites/repo995752852.wordpress.com/posts/?category=steam',
+          },
+          {
+            name: 'No',
+            url: 'https://public-api.wordpress.com/rest/v1.1/sites/repo995752852.wordpress.com/posts/?category=stea',
+          },
+        ],
+      })
+    </script>
+  </body>
 </html>
