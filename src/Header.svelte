@@ -1,6 +1,6 @@
-<script>
-  export let value
-  export let endpoints
+<script>	
+	export let value
+	export let endpoints
 </script>
 
 <header>
@@ -17,11 +17,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+		align-items: center;
     gap: var(--size);
     padding-block: var(--size);
     padding-inline: var(--double-size);
-  }
-  select:focus {
-    outline: 2px solid var(--accent);
   }
 </style>

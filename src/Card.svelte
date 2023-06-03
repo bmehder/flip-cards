@@ -2,8 +2,8 @@
   export let item
 
   let isFlipped = false
-
-  const handleClick = () => (isFlipped = !isFlipped)
+	
+  const handleClick = () => isFlipped = !isFlipped
 </script>
 
 <button class:isFlipped on:click={handleClick}>

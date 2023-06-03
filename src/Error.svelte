@@ -1,5 +1,5 @@
 <script>
-  export let error
+  import { error } from './store'
 </script>
 
-<h2>😱 {error.message}</h2>
+<h2>😱 {$error.message}</h2>

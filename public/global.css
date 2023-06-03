@@ -36,9 +36,8 @@ button,
 select {
   font-family: inherit;
   font-size: inherit;
-  margin-block-end: var(--third-size);
-  -webkit-padding: var(--third-size) 0;
-  padding: var(--third-size);
+  margin: 0;
+  padding: var(--half-size);
   border: none;
   border-radius: 4px;
   line-height: inherit;
