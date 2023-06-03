@@ -14,7 +14,7 @@
 		out: { y: 1000, delay: 0, duration: 300, opacity: 1 }
 	}
 
-	const jsonToJS = arg => arg.json()
+	const jsonToJS = response => response.json()
   
   const setItems = arg => $items = arg
   const setError = arg => $error = arg

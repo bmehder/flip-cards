@@ -19,11 +19,11 @@
   button {
     position: relative;
     aspect-ratio: 1;
-    transition: rotate 0.5s ease;
-    transform-style: preserve-3d;
+    color: var(--light);
     border-radius: var(--size);
     outline: 4px solid var(--light);
-    color: var(--light);
+    transition: rotate 0.5s ease;
+    transform-style: preserve-3d;
   }
   button:focus {
     outline: 4px solid var(--accent);

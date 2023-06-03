@@ -25,7 +25,7 @@
 
 body {
   min-height: 100vh;
-  padding: var(--half-size);
+  /* padding: var(--half-size); */
   background-image: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
   color: var(--light);
   font-family: var(--fonts);
